@@ -99,13 +99,6 @@ export default function RifaDos() {
     }, []);
 
     return <div className="grid justify-items-center pt-14">
-        <h1 className="text-primary text-3xl">{nombreRifa}</h1>
-        <div className="w-full">
-            <RifaSelector listBoletos={listBoletos} kartChange={kartChange}></RifaSelector>
-        </div>
-        <div className="pt-4">
-            <PaginadorBoletos total={total_boletos} handleClick={handleClickPaginador}></PaginadorBoletos>
-        </div>
         <div className="text-center p-4">
             <input onChange={(e) => setAzarNumero(e.target.value)} value={azarNumero} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="number" placeholder="Numero" />
             <button className="bg-primary m-4 p-2 text-secondary" onClick={() => getAzarTickets(azarNumero)}>Obtener boleto al azar</button>
@@ -119,6 +112,13 @@ export default function RifaDos() {
         </div>
         <div className="mt-20 mb-20 p-2">
             <FormularioCompra costo={precio_boletos} kart={kart} kartHandler={setKart}></FormularioCompra>
+        </div>
+        <h1 className="text-primary text-3xl">{nombreRifa}</h1>
+        <div className="w-full">
+            <RifaSelector listBoletos={listBoletos} kartChange={kartChange}></RifaSelector>
+        </div>
+        <div className="pt-4">
+            <PaginadorBoletos total={total_boletos} handleClick={handleClickPaginador}></PaginadorBoletos>
         </div>
     </div>
 }

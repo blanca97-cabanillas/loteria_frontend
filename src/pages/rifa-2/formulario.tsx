@@ -57,7 +57,6 @@ export default function FormularioCompra({ kart, kartHandler, costo }) {
                     <h3 className="col-span-2 text-left pb-2">Telefono: {selectedItem?.telefono_persona}</h3>
                     <h3 className="text-left pb-2">Boletos: {selectedItem?.boleto?.length}</h3>
                     <h3 className="text-left pb-2">Total: ${(selectedItem?.boleto?.length*costo).toFixed(2)}</h3>
-
                 </div>
                 <div>
                     {selectedItem?.boleto?.map(i => <span className={"text-xs font-medium mr-2 px-2.5 py-0.5 rounded border " + (selectedItem.status === 'ESPERA' ? 'bg-yellow-100 text-yellow-800 border-yellow-400' : 'bg-green-100 text-green-800 border-green-400')} key={i.numero}>{i.numero}</span>)}

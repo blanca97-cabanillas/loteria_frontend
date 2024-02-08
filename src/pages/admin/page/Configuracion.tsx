@@ -7,7 +7,7 @@ import { getConfiguracion, updateRifa } from 'src/services/configuracion-rifa/co
 import { NotificationManager } from 'react-notifications';
 
 const schema = yup.object({
-    nombre_rifa: onlyLetters({ required: true, maxSize: 40 }),
+    nombre_rifa: allCaracters({ required: true, maxSize: 40 }),
     numero_boletos: onlyNumbers({ maxSize: 10, required: true }),
     precio_boleto: onlyNumbers({ maxSize: 5, required: true }),
     urlImage: allCaracters({ required: true, maxSize: 500 }),

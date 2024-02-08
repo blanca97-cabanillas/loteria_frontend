@@ -42,7 +42,7 @@ export default function FormularioCompra({ kart, kartHandler, costo }) {
                 }
             });
         } else {
-            NotificationManager.warning('Seleccione por lo menor un boleto', 'Warning');
+            NotificationManager.warning('Seleccione por lo menos un boleto', 'Warning');
         }
 
     }
